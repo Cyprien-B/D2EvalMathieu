@@ -1,38 +1,40 @@
 package com.example.evalmathieud2.home.ui.screens
 
-
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import com.example.evalmathieud2.home.ui.components.CharacterRow
+import com.example.evalmathieud2.home.ui.viewmodels.HomeScreenViewModel
 import androidx.navigation.NavController
-import com.example.evalmathieud2.features.home.ui.R
 
 @Composable
-fun HomeScreen(navController: NavController) {
+fun HomeScreen(navController: NavController,viewModel: HomeScreenViewModel) {
+    val uiState by viewModel.state.collectAsState()
+
     Scaffold{ innerPadding ->
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding),
-            contentAlignment = Alignment.Center
-        ) {
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Text(text = stringResource(R.string.welcome_to_the_home_test))
-                Button(onClick = {navController.navigate("detail_screen") }) {
-                    Text(text = "Click me")
+        val modifier = Modifier
+            .fillMaxSize()
+            .padding(innerPadding)
+
+        if (uiState.characters.isEmpty()) {
+            Box(modifier = modifier, contentAlignment = Alignment.Center) {
+                CircularProgressIndicator()
+            }
+        } else {
+            LazyColumn(modifier = modifier) {
+                items(uiState.characters, key = { it.id }) { character ->
+                    CharacterRow(character = character)
+                    Button(onClick = { navController.navigate("home_screen")}) {
+                        Text(text = character.name)
+                    }
                 }
             }
         }
     }
 }
-

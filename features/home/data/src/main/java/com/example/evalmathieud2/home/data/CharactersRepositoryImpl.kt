@@ -5,7 +5,7 @@ import com.example.evalmathieud2.home.domain.Character
 import com.example.evalmathieud2.home.domain.CharactersRepository
 
 /**
- * implementation de
+ * implementation des donnée mocker pour le moment, à remplacer par une vrai source api
  */
 class CharactersRepositoryImpl : CharactersRepository {
 

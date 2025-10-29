@@ -16,7 +16,9 @@ import com.example.evalmathieud2.home.ui.screens.DetailScreen
 import com.example.evalmathieud2.home.ui.screens.HomeScreen
 import com.example.evalmathieud2.home.ui.screens.ListScreen
 import com.example.evalmathieud2.ui.theme.EvalMathieuD2Theme
+import com.example.evalmathieud2.home.ui.viewmodels.HomeScreenViewModel
 import org.koin.core.context.startKoin
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +36,8 @@ class MainActivity : ComponentActivity() {
                     startDestination = Routes.HOMESCREEN
                 ) {
                     composable(Routes.HOMESCREEN) {
-                        HomeScreen(navController)
+                        val viewModel = viewModel{HomeScreenViewModel()}
+                        HomeScreen(navController, viewModel)
                     }
                     composable(Routes.LISTSCREEN) {
                         ListScreen(navController)

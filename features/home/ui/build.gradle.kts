@@ -43,4 +43,11 @@ dependencies {
     // implementation de koin pour l'injection de dépendances
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.bundles.koin)
+
+    // Dépendances vers les modules home
+    implementation(project(":features:home:domain"))
+    implementation(project(":features:home:data"))
+
+    // Dépendance vers le module core:ui pour CharacterCard
+    implementation(project(":core:ui"))
 }
