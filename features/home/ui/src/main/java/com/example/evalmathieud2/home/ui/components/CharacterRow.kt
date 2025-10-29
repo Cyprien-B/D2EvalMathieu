@@ -8,25 +8,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.evalmathieud2.home.domain.Character
-import com.example.evalmathieud2.core.system.playSound
-import com.example.evalmathieud2.core.system.vibrate
-import com.example.evalmathieud2.core.ui.R
+import com.example.evalmathieud2.home.ui.viewmodels.CharacterRowViewModel
 
 /**
  * Affiche une ligne pour un personnage de Dragon Ball.
- * Ce composant est interactif : un clic déclenche une vibration et un son,
- * en plus de l'action de navigation fournie.
+ * Ce composant est interactif : un clic déclenche une vibration et un son via le ViewModel.
  *
  * @param character Le personnage à afficher.
  * @param modifier Le modificateur à appliquer à la carte.
  * @param onClick L'action à exécuter lors d'un clic.
+ * @param viewModel ViewModel gérant les interactions du composant.
  */
 @Composable
 fun CharacterRow(
     character: Character,
     modifier: Modifier = Modifier,
-    onClick: () -> Unit = {}
+    onClick: () -> Unit = {},
+    viewModel: CharacterRowViewModel = viewModel()
 ) {
     val context = LocalContext.current
 
@@ -35,9 +35,7 @@ fun CharacterRow(
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 6.dp)
             .clickable {
-                context.playSound(R.raw.ding)
-                context.vibrate()
-                onClick()
+                viewModel.handleCharacterClick(context, onClick)
             },
         colors = CardDefaults.cardColors()
     ) {
