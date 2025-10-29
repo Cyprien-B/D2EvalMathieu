@@ -13,6 +13,7 @@ import com.example.evalmathieud2.core.system.playSound
 import com.example.evalmathieud2.core.system.vibrate
 import com.example.evalmathieud2.core.ui.R
 
+
 @Composable
 fun CharacterRow(
     character: Character,

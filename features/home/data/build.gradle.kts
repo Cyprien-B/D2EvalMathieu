@@ -41,5 +41,7 @@ dependencies {
     implementation(project.dependencies.platform(libs.koin.bom))
     implementation(libs.bundles.koin)
 
+    // implementation de ktor pour les appels réseau
+    implementation(libs.bundles.ktor)
 
 }

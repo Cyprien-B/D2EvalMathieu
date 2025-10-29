@@ -8,7 +8,7 @@ import androidx.annotation.RawRes
 /**
  * Fonction d'extension du Context pour jouer un son
  * @param soundResId L'ID de la ressource audio (depuis res/raw)
- *  *
+ *
  */
 fun Context.playSound(
     @RawRes soundResId: Int
