@@ -12,9 +12,6 @@ import android.os.VibratorManager
  * @param amplitude Amplitude de la vibration (entre 1 et 255, par defaut c'est 155)
  */
 
-// Il m'arrive d'avoir une erreur sur les permissions, mais je n'arrive pas à la reproduire systématiquement mais
-//  crée un manifest dans ce module avec les autorisation reglera le probléme. l'erreur a disparu de mon ide donc
-// je prefere ne pas l'ajouter pour le moment
 fun Context.vibrate(durationMillis: Long = 3000, amplitude: Int = 155) {
     val vibrator = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
         // Android 12 et supérieur

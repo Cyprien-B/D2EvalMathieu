@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.evalmathieud2.core.system">
+
+    <!-- Déclare les permissions nécessaires pour l'API de vibration utilisées dans ce module -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Certains outils de lint peuvent signaler l'usage de USE_VIBRATION : on le déclare ici et on ignore l'avertissement si présent -->
+    <uses-permission android:name="android.permission.USE_VIBRATION" tools:ignore="MissingPermission" />
+
+</manifest>
+

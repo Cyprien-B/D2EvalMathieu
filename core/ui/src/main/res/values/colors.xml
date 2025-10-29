@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Couleurs Dragon Ball - Light Theme -->
-    <color name="orange_primary">#FFFF9500</color>
-    <color name="blue_primary">#FF0288D1</color>
-    <color name="yellow_accent">#FFFDD835</color>
-    <color name="background_light">#FFFFFFFF</color>
-    <color name="surface_light">#FFFAFAFA</color>
-    <color name="text_light">#FF212121</color>
 
-    <!-- Couleurs Dragon Ball - Dark Theme -->
-    <color name="orange_primary_dark">#FFFF9100</color>
-    <color name="blue_primary_dark">#FF4DD0E1</color>
-    <color name="yellow_accent_dark">#FFFDD835</color>
-    <color name="background_dark">#FF121212</color>
-    <color name="surface_dark">#FF1E1E1E</color>
-    <color name="text_dark">#FFFFFFFF</color>
+
+    <color name="purple_80">#D0BCFF</color>
+    <color name="purple_grey_80">#CCC2DC</color>
+    <color name="pink_80">#EFB8C8</color>
+    <color name="purple_40">#6650A4</color>
+    <color name="purple_grey_40">#625B71</color>
+    <color name="pink_40">#7D5260</color>
+    <color name="colorPrimary">#6650A4</color>
+    <color name="colorSecondary">#625B71</color>
+    <color name="colorTertiary">#7D5260</color>
+
 </resources>
+

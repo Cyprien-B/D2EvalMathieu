@@ -13,10 +13,7 @@ class CharactersRepositoryImpl(
     private val apiClient: DragonBallApiClient
 ) : CharactersRepository {
 
-    /**
-     * Récupère la liste des personnages depuis l'API
-     * Utilise le mapper pour convertir les DTOs en objets du domaine
-     */
+
     override suspend fun getCharacters(): List<Character> {
         // Appel à l'API pour récupérer les données
         val response = apiClient.getCharacters()

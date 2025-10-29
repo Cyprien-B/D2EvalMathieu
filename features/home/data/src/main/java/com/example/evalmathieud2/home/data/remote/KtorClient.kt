@@ -62,11 +62,4 @@ class DragonBallApiClient {
         }.body()
     }
 
-    /**
-     * Ferme le client HTTP
-     * À appeler lorsque le client n'est plus nécessaire
-     */
-    fun close() {
-        httpClient.close()
-    }
 }
