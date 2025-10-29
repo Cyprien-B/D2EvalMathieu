@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Couleurs Dragon Ball - Light Theme -->
+    <color name="orange_primary">#FFFF9500</color>
+    <color name="blue_primary">#FF0288D1</color>
+    <color name="yellow_accent">#FFFDD835</color>
+    <color name="background_light">#FFFFFFFF</color>
+    <color name="surface_light">#FFFAFAFA</color>
+    <color name="text_light">#FF212121</color>
+
+    <!-- Couleurs Dragon Ball - Dark Theme -->
+    <color name="orange_primary_dark">#FFFF9100</color>
+    <color name="blue_primary_dark">#FF4DD0E1</color>
+    <color name="yellow_accent_dark">#FFFDD835</color>
+    <color name="background_dark">#FF121212</color>
+    <color name="surface_dark">#FF1E1E1E</color>
+    <color name="text_dark">#FFFFFFFF</color>
 </resources>

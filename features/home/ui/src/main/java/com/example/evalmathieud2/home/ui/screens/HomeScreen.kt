@@ -14,17 +14,29 @@ import com.example.evalmathieud2.home.ui.components.CharacterRow
 import com.example.evalmathieud2.home.ui.viewmodels.HomeScreenViewModel
 import androidx.navigation.NavController
 import com.example.evalmathieud2.features.home.ui.R
+import com.example.evalmathieud2.core.ui.components.ThemeToggleButton
+import com.example.evalmathieud2.core.ui.theme.ThemeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavController,viewModel: HomeScreenViewModel) {
+fun HomeScreen(
+    navController: NavController,
+    viewModel: HomeScreenViewModel,
+    themeViewModel: ThemeViewModel
+) {
     val uiState by viewModel.state.collectAsState()
+    val isDarkTheme by themeViewModel.isDarkTheme.collectAsState()
 
     Scaffold(
         topBar = {
             TopAppBar(
-
-                title = { Text(stringResource(R.string.dragon_ball_characters)) }
+                title = { Text(stringResource(R.string.dragon_ball_characters)) },
+                actions = {
+                    ThemeToggleButton(
+                        isDarkTheme = isDarkTheme,
+                        onToggleTheme = { themeViewModel.toggleTheme() }
+                    )
+                }
             )
         }
     ) { innerPadding ->
