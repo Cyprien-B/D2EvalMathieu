@@ -7,35 +7,23 @@ import com.example.evalmathieud2.home.data.local.CharacterDao
 import org.koin.dsl.module
 
 /**
- * Module Koin pour l'injection de dépendances de la couche de données.
- *
- * Fournit la base de données Room et le DAO des personnages.
- *
- * @see AppDatabase
- * @see CharacterDao
+ * Module Koin pour la base de données Room.
  */
 val databaseModule = module {
 
-    /**
-     * Fournit une instance singleton de la base de données Room.
-     *
-     * La base de données est créée avec le nom "dragonball_database".
-     */
+    /** Instance unique de la base de données Room. */
     single {
         Room.databaseBuilder(
             get<Context>(),
             AppDatabase::class.java,
             "dragonball_database"
         )
-        .fallbackToDestructiveMigration() // En cas de changement de schéma, recrée la DB
+        .fallbackToDestructiveMigration()
         .build()
     }
 
-    /**
-     * Fournit le DAO des personnages depuis la base de données.
-     */
+    /** Fournit le DAO des personnages. */
     single<CharacterDao> {
         get<AppDatabase>().characterDao()
     }
 }
-
