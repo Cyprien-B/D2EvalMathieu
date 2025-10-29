@@ -25,8 +25,8 @@ fun DetailScreen(navController: NavController) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "Welcome to the Home test")
-                Button(onClick = { /*navController.navigate("list_screen") */}) {
+                Text(text = "Welcome to the DETAILSCREEN")
+                Button(onClick = { navController.navigate("home_screen")}) {
                     Text(text = "Click me")
                 }
             }

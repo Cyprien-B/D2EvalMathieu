@@ -50,7 +50,14 @@ dependencies {
     implementation(libs.transportation.consumer)
     debugImplementation(libs.androidx.compose.ui.tooling)
 
+    // implementation de koin pour l'injection de dépendances
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.bundles.koin)
+
     /** implementation des ui*/
     implementation(project(":core:ui"))
     implementation(project(":features:home:ui"))
+    implementation(project(":features:home:api"))
+
+
 }

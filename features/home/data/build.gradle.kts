@@ -27,6 +27,8 @@ android {
 }
 
 dependencies {
+    implementation(project(":features:home:domain"))
+
     implementation(platform(libs.androidx.compose.bom))
 
     implementation(libs.androidx.core.ktx)
@@ -34,4 +36,10 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.bundles.compose.ui)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // implementation de koin pour l'injection de dépendances
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.bundles.koin)
+
+
 }

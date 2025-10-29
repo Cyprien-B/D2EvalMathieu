@@ -11,14 +11,20 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.evalmathieud2.home.charactersModule
 import com.example.evalmathieud2.home.ui.screens.DetailScreen
 import com.example.evalmathieud2.home.ui.screens.HomeScreen
 import com.example.evalmathieud2.home.ui.screens.ListScreen
 import com.example.evalmathieud2.ui.theme.EvalMathieuD2Theme
+import org.koin.core.context.startKoin
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        startKoin {
+            modules(charactersModule)
+        }
         enableEdgeToEdge()
         setContent {
             EvalMathieuD2Theme {

@@ -11,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
+import com.example.evalmathieud2.features.home.ui.R
 
 @Composable
 fun HomeScreen(navController: NavController) {
@@ -25,8 +27,8 @@ fun HomeScreen(navController: NavController) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "Welcome to the Home test")
-                Button(onClick = { /*navController.navigate("list_screen") */}) {
+                Text(text = stringResource(R.string.welcome_to_the_home_test))
+                Button(onClick = {navController.navigate("detail_screen") }) {
                     Text(text = "Click me")
                 }
             }

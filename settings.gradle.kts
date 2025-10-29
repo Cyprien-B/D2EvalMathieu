@@ -34,9 +34,3 @@ include(":features:home:ui")
 include(":features:home:api")
 include(":features:home:data")
 include(":features:home:domain")
-
-//features
-include(":features:feature1:ui")
-include(":features:feature1:api")
-include(":features:feature1:data")
-include(":features:feature1:domain")

@@ -39,4 +39,8 @@ dependencies {
     implementation(libs.bundles.compose.ui)
     implementation(libs.androidx.navigation.runtime.ktx)
     debugImplementation(libs.androidx.compose.ui.tooling)
+
+    // implementation de koin pour l'injection de dépendances
+    implementation(project.dependencies.platform(libs.koin.bom))
+    implementation(libs.bundles.koin)
 }

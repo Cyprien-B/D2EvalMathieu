@@ -17,11 +17,6 @@
             <option value="$PROJECT_DIR$/core/system" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/features" />
-            <option value="$PROJECT_DIR$/features/feature1" />
-            <option value="$PROJECT_DIR$/features/feature1/api" />
-            <option value="$PROJECT_DIR$/features/feature1/data" />
-            <option value="$PROJECT_DIR$/features/feature1/domain" />
-            <option value="$PROJECT_DIR$/features/feature1/ui" />
             <option value="$PROJECT_DIR$/features/home" />
             <option value="$PROJECT_DIR$/features/home/api" />
             <option value="$PROJECT_DIR$/features/home/data" />
