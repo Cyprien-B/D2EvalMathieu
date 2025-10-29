@@ -1,5 +1,6 @@
 package com.example.evalmathieud2.home.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
@@ -11,12 +12,14 @@ import com.example.evalmathieud2.home.domain.Character
 @Composable
 fun CharacterRow(
     character: Character,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onClick: () -> Unit = {}
 ) {
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 6.dp),
+            .padding(horizontal = 12.dp, vertical = 6.dp)
+            .clickable(onClick = onClick),
         colors = CardDefaults.cardColors()
     ) {
         Row(

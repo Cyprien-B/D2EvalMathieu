@@ -27,12 +27,15 @@ fun HomeScreen(navController: NavController,viewModel: HomeScreenViewModel) {
                 CircularProgressIndicator()
             }
         } else {
-            LazyColumn(modifier = modifier) {
+            LazyColumn(
+                modifier = modifier,
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
                 items(uiState.characters, key = { it.id }) { character ->
-                    CharacterRow(character = character)
-                    Button(onClick = { navController.navigate("home_screen")}) {
-                        Text(text = character.name)
-                    }
+                    CharacterRow(
+                        character = character,
+                        onClick = { navController.navigate("detail_screen") }
+                    )
                 }
             }
         }
