@@ -4,6 +4,7 @@ import com.example.evalmathieud2.home.domain.Character
 
 /**
  *  Mock des donnée pour pouvoir initiliser l'application sans avoir besoin d'appeler l'API
+ *  a garder pour les tests et le dev
  */
 data class CharacterDto(
     val id: Int,

@@ -1,4 +1,4 @@
-package com.example.evalmathieud2.home.data
+package com.example.evalmathieud2.home.data.repository
 
 import com.example.evalmathieud2.home.data.remote.DragonBallApiClient
 import com.example.evalmathieud2.home.data.remote.mapper.CharacterMapper
@@ -7,16 +7,15 @@ import com.example.evalmathieud2.home.domain.CharactersRepository
 
 /**
  * Implémentation du repository des personnages
- * Récupère les données de l'API Dragon Ball et les convertit en objets du domaine
- * Utilise le mapper pour transformer les DTOs en entités métier
+ * Récupère les données de l'API et les convertit en objets du domaine
  */
 class CharactersRepositoryImpl(
     private val apiClient: DragonBallApiClient
 ) : CharactersRepository {
 
     /**
-     * Récupère la liste des personnages depuis l'API Dragon Ball
-     * Le mapper convertit automatiquement les CharacterDto en Character
+     * Récupère la liste des personnages depuis l'API
+     * Utilise le mapper pour convertir les DTOs en objets du domaine
      */
     override suspend fun getCharacters(): List<Character> {
         // Appel à l'API pour récupérer les données
@@ -26,3 +25,4 @@ class CharactersRepositoryImpl(
         return CharacterMapper.toCharacterList(response.items)
     }
 }
+
