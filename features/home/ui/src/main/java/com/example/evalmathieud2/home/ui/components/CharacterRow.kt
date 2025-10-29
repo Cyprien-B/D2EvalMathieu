@@ -6,8 +6,12 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import com.example.evalmathieud2.home.domain.Character
+import com.example.evalmathieud2.core.system.playSound
+import com.example.evalmathieud2.core.system.vibrate
+import com.example.evalmathieud2.core.ui.R
 
 @Composable
 fun CharacterRow(
@@ -15,11 +19,17 @@ fun CharacterRow(
     modifier: Modifier = Modifier,
     onClick: () -> Unit = {}
 ) {
+    val context = LocalContext.current
+
     Card(
         modifier = modifier
             .fillMaxWidth()
             .padding(horizontal = 12.dp, vertical = 6.dp)
-            .clickable(onClick = onClick),
+            .clickable {
+                context.playSound(R.raw.ding)
+                context.vibrate()
+                onClick()
+            },
         colors = CardDefaults.cardColors()
     ) {
         Row(
@@ -37,7 +47,7 @@ fun CharacterRow(
                 )
                 Spacer(modifier = Modifier.height(2.dp))
                 Text(
-                    text = character.affiliation ?: "",
+                    text = character.affiliation,
                     style = MaterialTheme.typography.bodySmall
                 )
             }

@@ -48,6 +48,7 @@ dependencies {
     implementation(project(":features:home:domain"))
     implementation(project(":features:home:data"))
 
-    // Dépendance vers le module core:ui pour CharacterCard
+    // Dépendance vers le module core:ui et system
     implementation(project(":core:ui"))
+    implementation(project(":core:system"))
 }
