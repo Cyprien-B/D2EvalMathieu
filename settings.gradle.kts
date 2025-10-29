@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 
-// ici j'ai supprimer les message d'erreur due a une version instable de l'api gradle apres étude des risque cela ne pose pas de problème pour le moment
+// Ici j'ai supprimé les messages d'erreur dus à une version instable de l'API Gradle. Après étude des risques, cela ne pose pas de problème pour le moment.
 @Suppress("UnstableApiUsage")
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)

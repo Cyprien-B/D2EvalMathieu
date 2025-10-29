@@ -13,6 +13,15 @@ import com.example.evalmathieud2.core.system.playSound
 import com.example.evalmathieud2.core.system.vibrate
 import com.example.evalmathieud2.core.ui.R
 
+/**
+ * Affiche une ligne pour un personnage de Dragon Ball.
+ * Ce composant est interactif : un clic déclenche une vibration et un son,
+ * en plus de l'action de navigation fournie.
+ *
+ * @param character Le personnage à afficher.
+ * @param modifier Le modificateur à appliquer à la carte.
+ * @param onClick L'action à exécuter lors d'un clic.
+ */
 @Composable
 fun CharacterRow(
     character: Character,
