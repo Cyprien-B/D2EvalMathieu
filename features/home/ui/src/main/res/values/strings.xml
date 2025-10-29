@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">EvalMathieuD2</string>
-    <string name="welcome_to_the_home_test">Welcome to the Home test</string>
     <string name="dragon_ball_characters">Dragon Ball Characters</string>
+    <string name="welcome_to_the_detailscreen">Welcome to the DETAILSCREEN</string>
 </resources>

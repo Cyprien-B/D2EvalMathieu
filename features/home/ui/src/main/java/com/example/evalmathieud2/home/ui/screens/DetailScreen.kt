@@ -11,7 +11,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
+import com.example.evalmathieud2.features.home.ui.R
 
 @Composable
 fun DetailScreen(navController: NavController) {
@@ -25,7 +27,7 @@ fun DetailScreen(navController: NavController) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(text = "Welcome to the DETAILSCREEN")
+                Text(text = stringResource(R.string.welcome_to_the_detailscreen))
                 Button(onClick = { navController.navigate("home_screen")}) {
                     Text(text = "Click me")
                 }

@@ -9,15 +9,25 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import com.example.evalmathieud2.home.ui.components.CharacterRow
 import com.example.evalmathieud2.home.ui.viewmodels.HomeScreenViewModel
 import androidx.navigation.NavController
+import com.example.evalmathieud2.features.home.ui.R
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController,viewModel: HomeScreenViewModel) {
     val uiState by viewModel.state.collectAsState()
 
-    Scaffold{ innerPadding ->
+    Scaffold(
+        topBar = {
+            TopAppBar(
+
+                title = { Text(stringResource(R.string.dragon_ball_characters)) }
+            )
+        }
+    ) { innerPadding ->
         val modifier = Modifier
             .fillMaxSize()
             .padding(innerPadding)
