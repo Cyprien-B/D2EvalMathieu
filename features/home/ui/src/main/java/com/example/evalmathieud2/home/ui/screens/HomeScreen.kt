@@ -17,6 +17,14 @@ import com.example.evalmathieud2.features.home.ui.R
 import com.example.evalmathieud2.core.ui.components.ThemeToggleButton
 import com.example.evalmathieud2.core.ui.theme.ThemeViewModel
 
+/**
+ * Écran d'accueil affichant la liste des personnages Dragon Ball.
+ * Permet de basculer entre thème clair/sombre et de naviguer vers les détails d'un personnage.
+ *
+ * @param navController Contrôleur de navigation pour gérer la navigation entre écrans.
+ * @param viewModel ViewModel gérant l'état de la liste des personnages.
+ * @param themeViewModel ViewModel gérant le thème de l'application.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(

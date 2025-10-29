@@ -15,6 +15,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import com.example.evalmathieud2.features.home.ui.R
 
+/**
+ * Écran de détail affichant un message de bienvenue et un bouton pour revenir à l'écran d'accueil.
+ * Si j'avais eu le temps, j'aurais détaillé le personnage sélectionné.
+ * @param navController Le contrôleur de navigation pour gérer la navigation entre les écrans.
+ */
 @Composable
 fun DetailScreen(navController: NavController) {
     Scaffold{ innerPadding ->
