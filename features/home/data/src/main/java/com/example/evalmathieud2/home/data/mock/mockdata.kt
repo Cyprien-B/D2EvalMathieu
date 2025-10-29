@@ -4,7 +4,7 @@ import com.example.evalmathieud2.home.domain.Character
 
 /**
  *  Mock des donnée pour pouvoir initiliser l'application sans avoir besoin d'appeler l'API
- *  a garder pour les tests et le dev
+ *  a garder pour les tests et le dev, j'ai donc supprimé les warning "unuse" intentionnelement
  */
 data class CharacterDto(
     val id: Int,
@@ -40,6 +40,8 @@ data class CharacterResponse(
     val links: Links
 )
 
+//a garder pour les tests et le dev, j'ai donc supprimé les warning intentionnelement
+@Suppress("unused")
 object MockData {
     private val charactersDto = listOf(
         CharacterDto(
@@ -181,6 +183,7 @@ object MockData {
         last = "https://dragonball-api.com/api/characters?page=6&limit=10"
     )
 
+    @Suppress("unused")
     val characterResponse = CharacterResponse(
         items = characters,
         meta = meta,
